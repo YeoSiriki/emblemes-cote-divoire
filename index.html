@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emblèmes de la Côte d'Ivoire | UFR des Sciences Biologiques</title>
+    <link rel="icon" type="image/jpeg" href="images/ufr.jpg">
+
+    <meta name="description" content="Site officiel présentant tous les emblèmes nationaux de la Côte d'Ivoire. Projet de l'UFR des Sciences Biologiques.">
+    <meta name="keywords" content="Côte d'Ivoire, emblèmes, drapeau, hymne, devise, UFR Sciences Biologiques, QR code">
+    <meta name="author" content="UFR Sciences Biologiques">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Configuration Tailwind (inchangée) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ivory-orange': '#FF8200',
+                        'ivory-white': '#FFFFFF',
+                        'ivory-green': '#009A44',
+                        'ivory-gold': '#F7D117',
+                        'ivory-blue': '#0055A4',
+                        'ivory-red': '#EF3340'
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        playfair: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS externe -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="font-montserrat bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="flag-stripe"></div>
+
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+
+                <!-- LOGO -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden shadow">
+                        <img 
+                            src="images/ufr.jpg" 
+                            alt="Logo UFR Sciences Biologiques"
+                            class="w-10 h-10 object-contain"
+                        >
+                    </div>
+                    <div>
+                        <h1 class="text-lg md:text-xl font-bold text-ivory-green">
+                            UFR Sciences Biologiques
+                        </h1>
+                        <p class="text-xs md:text-sm text-gray-600">
+                            Université Peleforo Gon Coulibaly de Korhogo
+                        </p>
+                    </div>
+                </div>
+
+                <!-- MENU DESKTOP -->
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                        <li><a href="#drapeau" class="nav-link">Drapeau</a></li>
+                        <li><a href="#hymne" class="nav-link">Hymne</a></li>
+                        <li><a href="#devise" class="nav-link">Devise</a></li>
+                        <li><a href="#autres" class="nav-link">Autres Emblèmes</a></li>
+                    </ul>
+                </nav>
+
+                <!-- BOUTON MOBILE -->
+                <button id="menuBtn" class="md:hidden text-2xl text-ivory-green">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+            </div>
+
+            <!-- MENU MOBILE -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4">
+                <ul class="flex flex-col space-y-2 text-center">
+                    <li><a href="#accueil" class="mobile-link">Accueil</a></li>
+                    <li><a href="#drapeau" class="mobile-link">Drapeau</a></li>
+                    <li><a href="#hymne" class="mobile-link">Hymne</a></li>
+                    <li><a href="#devise" class="mobile-link">Devise</a></li>
+                    <li><a href="#autres" class="mobile-link">Autres Emblèmes</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-gradient text-white py-16 md:py-24 animate-fade-in">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-playfair font-bold mb-6 animate-slide-up">
+                    Les Emblèmes Nationaux de la Côte d'Ivoire
+                </h1>
+                <p class="text-xl mb-8 opacity-90">
+                    Découvrez les symboles qui représentent la richesse et la diversité de notre nation
+                </p>
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 inline-block">
+                    <p class="text-lg">
+                        <i class="fas fa-university mr-2"></i>
+                        Projet innovant de l'UFR des Sciences Biologiques
+                    </p>
+                    <p class="mt-2">
+                        Premier UFR à créer un site pour présenter les emblèmes nationaux
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Drapeau Section -->
+        <section id="drapeau" class="mb-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-playfair font-bold text-ivory-green mb-4">Le Drapeau Ivoirien</h2>
+                <div class="w-24 h-1 bg-ivory-orange mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-up">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                        <div class="relative">
+                            <!-- Drapeau representation -->
+                            <div class="h-64 flex">
+                                <div class="w-1/3 bg-ivory-orange"></div>
+                                <div class="w-1/3 bg-white flex items-center justify-center">
+                                    <div class="text-center">
+                                        <!-- <i class="fas fa-star text-ivory-gold text-5xl"></i>-> 
+                                       <!-- <p class="text-sm mt-2 text-gray-600">Étoile de l'espoir</p>-->
+                                    </div>
+                                </div>
+                                <div class="w-1/3 bg-ivory-green"></div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                                <h3 class="text-xl font-bold">Drapeau National</h3>
+                                <p>Adopté le 3 décembre 1959</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-ivory-green mb-3">Signification des couleurs</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-ivory-orange mr-3"></div>
+                                    <div>
+                                        <h4 class="font-bold">Orange</h4>
+                                        <p class="text-gray-600">Représente la savane et la fertilité du nord</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-white border border-gray-300 mr-3"></div>
+                                    <div>
+                                        <h4 class="font-bold">Blanc</h4>
+                                        <p class="text-gray-600">Symbolise la paix et l'unité nationale</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-ivory-green mr-3"></div>
+                                    <div>
+                                        <h4 class="font-bold">Vert</h4>
+                                        <p class="text-gray-600">Représente la forêt et l'espoir du sud</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-slide-up" style="animation-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Histoire et Symbolisme</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-ivory-orange">
+                            <h4 class="font-bold text-lg mb-2">Création du Drapeau</h4>
+                            <p class="text-gray-700">Le drapeau ivoirien a été créé en 1959 par le président Félix Houphouët-Boigny. Il a été officiellement adopté le 3 décembre 1959, quelques mois avant l'indépendance du pays.</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-ivory-blue">
+                            <h4 class="font-bold text-lg mb-2">Proportions Officielles</h4>
+                            <p class="text-gray-700">Le drapeau respecte des proportions précises : la largeur est égale aux deux tiers de la longueur. Chaque bande verticale occupe exactement un tiers de la largeur totale.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-6 bg-ivory-green bg-opacity-10 rounded-xl">
+                        <h4 class="font-bold text-lg mb-3 text-ivory-green">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            Saviez-vous ?
+                        </h4>
+                        <p class="text-gray-700">Le drapeau ivoirien est souvent confondu avec le drapeau irlandais, mais l'ordre des couleurs est inversé : l'Irlande a le vert à gauche et l'orange à droite.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hymne National Section -->
+        <section id="hymne" class="mb-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-playfair font-bold text-ivory-green mb-4">L'Abidjanaise - Hymne National</h2>
+                <div class="w-24 h-1 bg-ivory-orange mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="animate-slide-up">
+                    <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-ivory-red flex items-center justify-center mr-4">
+                                <i class="fas fa-music text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">L'Abidjanaise</h3>
+                                <p class="text-gray-600">Hymne national de la Côte d'Ivoire</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg mb-2 text-ivory-green">Paroles</h4>
+                                <div class="bg-gray-50 p-6 rounded-lg">
+                                    <p class="italic text-gray-700 mb-4">
+                                        "Salut ô terre d'espérance;<br>
+                                        Pays de l'hospitalité.<br>
+                                        Tes légions remplies de vaillance<br>
+                                        Ont relevé ta dignité."
+                                    </p>
+                                    <p class="text-gray-600 text-sm">
+                                        Extrait du premier couplet de L'Abidjanaise,<br>
+                                        écrit par Mathieu Ekra, Joachim Bony et Pierre Marie Coty
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 text-ivory-green">Écouter l'Hymne</h4>
+                            <div class="flex items-center space-x-4">
+                                <button id="playHymne" class="bg-ivory-orange text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors flex items-center">
+                                    <i class="fas fa-play mr-2"></i>
+                                    Écouter l'hymne
+                                </button>
+                                <div class="text-sm text-gray-600">
+                                    <p>Durée : 1:12</p>
+                                    <p>Composition : Pierre-Marie Coty</p>
+                                </div>
+                            </div>
+
+                            <!-- Audio réel -->
+                            <audio id="audioHymne" src="audio/Abidjanaise.mp4"></audio>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Histoire de l'Hymne</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full bg-ivory-blue flex items-center justify-center">
+                                        <span class="text-white font-bold">1960</span>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold text-lg">Adoption Officielle</h4>
+                                    <p class="text-gray-700 mt-1">L’Hymne national de la Côte d’Ivoire l’Abidjanaise, a été adopté par la loi n°60-207 du 27 Juillet 1960, soit dix (10) jours avant l’accession du pays à l’indépendance. La loi n°2016-886 du 08 Novembre 2016 portant constitution de la République de Côte d’Ivoire reprend celle de 2000 et dispose en son «article 48 alinéa 2» que l’Hymne de la République de Côte d’Ivoire est l’Abidjanaise.
+                                        Rédigé par l’Abbé Pierre marie COTY et composé par l’Abbé Pierre Michel PANGO, l’Abidjanaise est un chant solennel en l’honneur de notre Patrie.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full bg-ivory-green flex items-center justify-center">
+                                        <i class="fas fa-users text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold text-lg">Signification</h4>
+                                    <p class="text-gray-700 mt-1">Le nom "L'Abidjanaise" rend hommage à Abidjan, la capitale économique du pays. L'hymne célèbre l'unité, l'hospitalité et l'espérance du peuple ivoirien.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-full bg-ivory-gold flex items-center justify-center">
+                                        <i class="fas fa-award text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold text-lg">Utilisation Protocolaire</h4>
+                                    <p class="text-gray-700 mt-1">L'hymne est joué lors des cérémonies officielles, des événements sportifs internationaux et des visites de chefs d'État étrangers.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <h4 class="font-bold text-lg mb-3">Les Auteurs</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="text-center">
+                                    <div class="w-16 h-16 rounded-full bg-gray-200 mx-auto mb-2 overflow-hidden">
+                                        <img src="images/Mathieu_Ekra.jpg" alt="Mathieu Ekra" class="w-full h-full object-cover">
+                                    </div>
+                                    <p class="font-bold">Mathieu Ekra</p>
+                                    <p class="text-sm text-gray-600">Parolier</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-16 h-16 rounded-full bg-gray-200 mx-auto mb-2 overflow-hidden">
+                                        <img src="images/JOACHIM-BONY.jpg" alt="Joachim Bony" class="w-full h-full object-cover">
+                                    </div>
+                                    <p class="font-bold">Joachim Bony</p>
+                                    <p class="text-sm text-gray-600">Parolier</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-16 h-16 rounded-full bg-gray-200 mx-auto mb-2 overflow-hidden">
+                                        <img src="images/PierreMarryCotie.png" alt="Pierre Marie Coty" class="w-full h-full object-cover">
+                                    </div>
+                                    <p class="font-bold">P.M. Coty</p>
+                                    <p class="text-sm text-gray-600">Compositeur</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Devise Section -->
+        <section id="devise" class="mb-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-playfair font-bold text-ivory-green mb-4">La Devise Nationale</h2>
+                <div class="w-24 h-1 bg-ivory-orange mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-r from-ivory-orange to-ivory-green rounded-2xl p-1 animate-slide-up">
+                    <div class="bg-white rounded-xl p-12 text-center">
+                        <div class="mb-8">
+                            <div class="w-24 h-24 rounded-full bg-ivory-gold bg-opacity-20 flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-quote-right text-ivory-gold text-4xl"></i>
+                            </div>
+                            <h3 class="text-5xl font-playfair font-bold text-gray-800 mb-4">
+                                Union - Discipline - Travail
+                            </h3>
+                            <p class="text-xl text-gray-600">Devise nationale de la Côte d'Ivoire</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                            <div class="p-6 rounded-lg border border-gray-200 hover:border-ivory-orange transition-colors">
+                                <div class="w-16 h-16 rounded-full bg-ivory-orange bg-opacity-10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-handshake text-ivory-orange text-2xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold mb-3">Union</h4>
+                                <p class="text-gray-700">L'union du peuple ivoirien par-delà les différences ethniques, religieuses et régionales.</p>
+                            </div>
+                            
+                            <div class="p-6 rounded-lg border border-gray-200 hover:border-ivory-green transition-colors">
+                                <div class="w-16 h-16 rounded-full bg-ivory-green bg-opacity-10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-balance-scale text-ivory-green text-2xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold mb-3">Discipline</h4>
+                                <p class="text-gray-700">Le respect des lois, des institutions et des valeurs qui fondent la nation.</p>
+                            </div>
+                            
+                            <div class="p-6 rounded-lg border border-gray-200 hover:border-ivory-blue transition-colors">
+                                <div class="w-16 h-16 rounded-full bg-ivory-blue bg-opacity-10 flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-hammer text-ivory-blue text-2xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold mb-3">Travail</h4>
+                                <p class="text-gray-700">L'effort collectif pour le développement et la prospérité de la nation.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12 pt-8 border-t border-gray-200">
+                            <h4 class="text-2xl font-bold mb-4 text-gray-800">Signification Historique</h4>
+                            <p class="text-gray-700 max-w-3xl mx-auto">
+                                Adoptée au moment de l'indépendance, cette devise résume les valeurs fondamentales que les pères fondateurs ont voulu inculquer à la nation naissante. Elle guide toujours les actions du gouvernement et inspire le peuple ivoirien dans sa marche vers le progrès.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Autres Emblèmes Section -->
+        <section id="autres" class="mb-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-playfair font-bold text-ivory-green mb-4">Autres Symboles Nationaux</h2>
+                <div class="w-24 h-1 bg-ivory-orange mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Découvrez les autres symboles qui représentent l'identité et la richesse de la Côte d'Ivoire</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Armoiries -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover animate-slide-up">
+                    <div class="h-48 flex items-center justify-center">
+                        <img src="images/harmoirie.png" alt="Armoiries Nationales" class="max-h-32 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Les Armoiries Nationales</h3>
+                        <p class="text-gray-700 mb-4">
+                            Représentent un éléphant d'Afrique, symbole de sagesse et de puissance, devant un palmier, avec un soleil levant.
+                            Les Armoiries de la République de Côte d’Ivoire sont créées par le décret n°64-237 du 26 Juin 1964 modificant le décret n°60-78 du 8 Février 1960.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-elephant mr-2"></i>
+                            <span>Éléphant d'Afrique - Symbole national</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Sceau -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover animate-slide-up" style="animation-delay: 0.1s;">
+                <div class="h-48 flex items-center justify-center">
+                    <img src="images/sceau.jpg" alt="Sceau National" class="max-h-32 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Le Sceau de l'État</h3>
+                    <p class="text-gray-700 mb-4">
+                        Utilisé pour authentifier les documents officiels. Il représente un éléphant entouré de la devise nationale.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-file-contract mr-2"></i>
+                        <span>Authentification des documents officiels</span>
+                    </div>
+                </div>
+            </div>
+                
+                <!-- Animal National -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover animate-slide-up" style="animation-delay: 0.2s;">
+                <div class="h-48 flex items-center justify-center">
+                    <img src="images/elephants.jpg" alt="Éléphant d'Afrique" class="max-h-32 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">L'Éléphant d'Afrique</h3>
+                    <p class="text-gray-700 mb-4">
+                        Symbole de sagesse, de longévité et de puissance. L'éléphant représente la force tranquille de la nation.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-brain mr-2"></i>
+                        <span>Symbole de sagesse et de puissance</span>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Arbre National -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover animate-slide-up" style="animation-delay: 0.3s;">
+                <div class="h-48 flex items-center justify-center">
+                    <img src="images/palmier.jpg" alt="Palmier à Huile" class="max-h-32 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Le Palmier à Huile</h3>
+                    <p class="text-gray-700 mb-4">
+                        Symbolise la prospérité et les ressources naturelles du pays. Il apparaît sur les armoiries nationales.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-seedling mr-2"></i>
+                        <span>Symbole de prospérité et de ressources</span>
+                    </div>
+                </div>
+            </div>
+
+                
+                <!-- FLe PORTRAIT DU CHEF DE L'ETAT-->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover animate-slide-up" style="animation-delay: 0.4s;">
+                <div class="h-48 flex items-center justify-center">
+                    <img src="images/president.jpg" alt="Portrait du Président" class="max-h-32 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">Portrait du Chef de l'État</h3>
+                    <p class="text-gray-700 mb-4">
+                        Le Président de la République, Chef de l'État, est le symbole de l'unité nationale et de la continuité de l'État. Il veille au respect de la Constitution, garantit l'intégrité du territoire et incarne la cohésion de la nation. Le président actuel est <strong>Alassane Ouattara</strong>.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-user-tie mr-2"></i>
+                        <span>Symbole de l'autorité et de l'unité nationale</span>
+                    </div>
+                </div>
+            </div>
+
+                
+                <!-- Monument National -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover animate-slide-up" style="animation-delay: 0.5s;">
+                <div class="h-48 flex items-center justify-center">
+                    <img src="images/baselique.jpg" alt="Basilique Notre-Dame de la Paix" class="max-h-32 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3">La Basilique Notre-Dame de la Paix</h3>
+                    <p class="text-gray-700 mb-4">
+                        Située à Yamoussoukro, c’est la plus grande basilique du monde. Elle symbolise la paix, la spiritualité et le rayonnement de la Côte d’Ivoire.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-church mr-2"></i>
+                        <span>Symbole de paix et de spiritualité</span>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+        <!-- QR Code Section -->
+        <section id="qr" class="mb-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-playfair font-bold text-ivory-green mb-4">Accès par QR Code</h2>
+                <div class="w-24 h-1 bg-ivory-orange mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">
+                    L'UFR des Sciences Biologiques innove en étant le premier à proposer un site accessible par QR code pour présenter les emblèmes nationaux
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="bg-gradient-to-r from-ivory-green to-ivory-blue rounded-2xl p-8 md:p-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="text-white animate-slide-up">
+                            <div class="mb-8">
+                                <h3 class="text-3xl font-bold mb-4">Innovation Technologique</h3>
+                                <p class="text-lg opacity-90">
+                                    Scannez le QR code avec votre smartphone pour accéder instantanément à ce site dédié aux emblèmes de la Côte d'Ivoire.
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-qrcode text-2xl"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-xl font-bold mb-2">Accès Rapide</h4>
+                                        <p>Un simple scan donne accès à toutes les informations sur les symboles nationaux.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-mobile-alt text-2xl"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-xl font-bold mb-2">Mobile First</h4>
+                                        <p>Site optimisé pour une consultation facile sur smartphone et tablette.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-graduation-cap text-2xl"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="text-xl font-bold mb-2">Mission Éducative</h4>
+                                        <p>Partager la connaissance des symboles nationaux avec les étudiants et le grand public.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 p-6 bg-white bg-opacity-10 rounded-xl">
+                                <h4 class="text-xl font-bold mb-3">
+                                    <i class="fas fa-lightbulb mr-2"></i>
+                                    Comment utiliser le QR code ?
+                                </h4>
+                                <ol class="list-decimal pl-5 space-y-2">
+                                    <li>Ouvrez l'appareil photo de votre smartphone</li>
+                                    <li>Pointez vers le QR code ci-contre</li>
+                                    <li>Cliquez sur le lien qui s'affiche</li>
+                                    <li>Explorez les emblèmes nationaux !</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="animate-slide-up" style="animation-delay: 0.2s;">
+                            <div class="bg-white rounded-2xl p-8 text-center">
+                                <div class="mb-6">
+                                    <h4 class="text-2xl font-bold text-gray-800 mb-2">QR Code d'Accès</h4>
+                                    <p class="text-gray-600">Scan me!</p>
+                                </div>
+                                
+                                <!-- QR Code Representation -->
+                                <div class="qr-pulse inline-block p-4 bg-white rounded-xl mb-6">
+                                    <div class="w-64 h-64 bg-gray-100 rounded-lg flex items-center justify-center relative">
+                                        <!-- QR Code pattern simulation -->
+                                        <div class="absolute top-4 left-4 w-12 h-12 bg-black rounded"></div>
+                                        <div class="absolute top-4 right-4 w-12 h-12 bg-black rounded"></div>
+                                        <div class="absolute bottom-4 left-4 w-12 h-12 bg-black rounded"></div>
+                                        
+                                        <div class="text-center">
+                                            <i class="fas fa-qrcode text-6xl text-gray-400 mb-2"></i>
+                                            <p class="text-sm text-gray-500">UFR Sciences Biologiques</p>
+                                            <p class="text-xs text-gray-400">Emblèmes Côte d'Ivoire</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="space-y-4">
+                                    <div>
+                                        <p class="font-bold text-gray-800">URL du site :</p>
+                                        <p class="text-ivory-green font-mono bg-gray-100 p-2 rounded">https://ufr-sciences-bio.ci/emblemes</p>
+                                    </div>
+                                    
+                                    <div class="pt-4 border-t border-gray-200">
+                                        <p class="text-sm text-gray-600">
+                                            <i class="fas fa-info-circle mr-1"></i>
+                                            Ce QR code sera affiché à l'entrée de l'UFR pour un accès facile à l'information
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 bg-white rounded-xl shadow-lg p-8">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">L'UFR des Sciences Biologiques</h3>
+                        <p class="text-gray-600">Pionnier dans l'innovation éducative et technologique</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="w-20 h-20 rounded-full bg-ivory-orange bg-opacity-10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-trophy text-ivory-orange text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">Premier UFR</h4>
+                            <p class="text-gray-700">Premier UFR à créer un site accessible par QR code dédié aux emblèmes nationaux</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-20 h-20 rounded-full bg-ivory-green bg-opacity-10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-book text-ivory-green text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">Mission Éducative</h4>
+                            <p class="text-gray-700">Diffuser la connaissance des symboles nationaux auprès des étudiants et du public</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-20 h-20 rounded-full bg-ivory-blue bg-opacity-10 flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-flag text-ivory-blue text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">Patriotisme</h4>
+                            <p class="text-gray-700">Renforcer le sentiment d'appartenance et la fierté nationale</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-ivory-orange flex items-center justify-center mr-3">
+                            <i class="fas fa-leaf text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">UFR des Sciences Biologiques</h3>
+                            <p class="text-sm text-gray-400">Université Peleforo Gon Coulibaly de Korhogo</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">
+                        Premier UFR à innover avec un site accessible par QR code pour présenter les emblèmes nationaux.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Emblèmes Nationaux</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#drapeau" class="text-gray-400 hover:text-white transition-colors">Drapeau National</a></li>
+                        <li><a href="#hymne" class="text-gray-400 hover:text-white transition-colors">Hymne National</a></li>
+                        <li><a href="#devise" class="text-gray-400 hover:text-white transition-colors">Devise Nationale</a></li>
+                        <li><a href="#autres" class="text-gray-400 hover:text-white transition-colors">Autres Symboles</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact UFR</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-ivory-orange mr-3"></i>
+                            <span class="text-gray-400">Dohkaha, route Abidjan</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-ivory-orange mr-3"></i>
+                            <span class="text-gray-400">+225 0586556598/  +225 0171515859 / +225 0748617114</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-ivory-orange mr-3"></i>
+                            <span class="text-gray-400">info@upgc.edu.ci</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Suivez-nous</h4>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="https://www.facebook.com/yeo.siriki.2025" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-ivory-orange transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-ivory-orange transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/siriki30895?igsh=MWFldThrdThoM2tmOA==" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-ivory-orange transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-ivory-orange transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-400">
+                        Rejoignez notre communauté pour plus d'innovations éducatives.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center">
+                <p class="text-gray-400">
+                    &copy; 2026 UFR des Sciences Biologiques - Université Peleforo Gon Coulibaly de Korhogo. Tous droits réservés.
+                </p>
+                <p class="text-sm text-gray-500 mt-2">
+                    Site créé dans le cadre du projet d'innovation "Emblèmes Nationaux Accessibles"
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-ivory-orange text-white shadow-lg hover:bg-orange-600 transition-colors hidden">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    
+</body>
+</html>

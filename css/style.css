@@ -1,0 +1,39 @@
+.hero-gradient {
+    background: linear-gradient(135deg, #FF8200 0%, #009A44 50%, #0055A4 100%);
+}
+
+.flag-stripe {
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        #FF8200 33%,
+        #FFFFFF 33%,
+        #FFFFFF 66%,
+        #009A44 66%
+    );
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.qr-pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 130, 0, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 130, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 130, 0, 0);
+    }
+}
