@@ -1,4 +1,3 @@
-// main.js
 
 // =======================
 // Données des emblèmes
@@ -126,3 +125,20 @@ document.addEventListener('DOMContentLoaded', () => {
 // Gestion redimensionnement
 // =======================
 window.addEventListener('resize', initMobileMenu);
+
+// Toggle menu mobile
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden'); // Affiche ou cache le menu
+    });
+}
+
+// Fermer le menu lorsqu'on clique sur un lien
+document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden'); // cache le menu après clic
+    });
+});
