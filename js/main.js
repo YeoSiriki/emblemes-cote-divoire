@@ -59,14 +59,36 @@ backToTopButton.addEventListener('click', () => {
 // =======================
 // Play hymne simulation
 // =======================
-const playHymneButton = document.getElementById('playHymne');
-if (playHymneButton) {
-    playHymneButton.addEventListener('click', () => {
-        const originalText = playHymneButton.innerHTML;
-        playHymneButton.innerHTML = '<i class="fas fa-volume-up mr-2"></i> Écoute en cours...';
-        playHymneButton.disabled = true;
+// =======================
+// Lecture réelle de l'hymne
+// =======================
+document.addEventListener("DOMContentLoaded", () => {
+    const playBtn = document.getElementById("playHymne");
+    const audio = document.getElementById("audioHymne");
+
+    if (!playBtn || !audio) return;
+
+    playBtn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play()
+                .then(() => {
+                    playBtn.innerHTML = '<i class="fas fa-pause mr-2"></i> Pause';
+                })
+                .catch(err => {
+                    alert("Erreur de lecture audio. Vérifiez le fichier.");
+                    console.error(err);
+                });
+        } else {
+            audio.pause();
+            playBtn.innerHTML = '<i class="fas fa-play mr-2"></i> Écouter l\'hymne';
+        }
     });
-}
+
+    audio.addEventListener("ended", () => {
+        playBtn.innerHTML = '<i class="fas fa-play mr-2"></i> Écouter l\'hymne';
+    });
+});
+
 
 // =======================
 // Animation card-hover
