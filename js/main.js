@@ -164,3 +164,56 @@ document.querySelectorAll('.mobile-link').forEach(link => {
         mobileMenu.classList.add('hidden'); // cache le menu après clic
     });
 });
+
+// Animation spéciale Google Maps
+const mapBox = document.querySelector('.map-animated');
+
+if (mapBox) {
+    const mapObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.3 });
+
+    mapObserver.observe(mapBox);
+}
+
+// =======================
+// Formulaire contact AJAX
+// =======================
+const contactForm = document.getElementById('contactForm');
+const formMessage = document.getElementById('formMessage');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Empêche le rechargement
+
+        const formData = new FormData(contactForm);
+
+        fetch('send_mail.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            formMessage.textContent = data.message;
+            if (data.status === 'success') {
+                formMessage.classList.remove('text-red-600');
+                formMessage.classList.add('text-green-600');
+                contactForm.reset(); // réinitialise le formulaire
+            } else {
+                formMessage.classList.remove('text-green-600');
+                formMessage.classList.add('text-red-600');
+            }
+        })
+        .catch(err => {
+            formMessage.textContent = "Erreur lors de l'envoi du message.";
+            formMessage.classList.remove('text-green-600');
+            formMessage.classList.add('text-red-600');
+            console.error(err);
+        });
+    });
+}
+

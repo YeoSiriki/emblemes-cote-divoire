@@ -26,6 +26,23 @@
     animation: pulse 2s infinite;
 }
 
+.map-animated {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.8s ease;
+}
+
+.map-animated.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.map-animated:hover {
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    transform: scale(1.02);
+}
+
+
 @keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 rgba(255, 130, 0, 0.4);
@@ -38,4 +55,34 @@
     }
 
     
+}
+
+/* Animation du formulaire */
+@keyframes slide-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up { animation: slide-up 0.6s ease-out; }
+
+/* Carte animée au survol */
+.map-animated {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.map-animated:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Couleurs personnalisées */
+:root {
+    --ivory-orange: #FF8200;
+    --ivory-green: #009A44;
+}
+.bg-ivory-orange { background-color: var(--ivory-orange); }
+.text-ivory-green { color: var(--ivory-green); }
+.hover\:bg-orange-600:hover { background-color: #e67300; }
+
+/* Message de confirmation */
+#formMessage {
+    font-weight: 500;
 }

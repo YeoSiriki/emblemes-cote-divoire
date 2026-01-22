@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message envoyé | UFR Sciences Biologiques</title>
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+</head>
+<body class="bg-gray-50 font-montserrat flex items-center justify-center h-screen">
+
+    <div class="bg-white rounded-xl shadow-lg p-12 text-center max-w-md animate-fade-in">
+        <h1 class="text-3xl font-bold text-ivory-green mb-4">Merci pour votre message !</h1>
+        <p class="text-gray-700 mb-6">
+            Votre message a été envoyé avec succès 🙂<br>
+            Nous vous répondrons le plus tôt possible.
+        </p>
+        <a href="index.html" class="inline-block bg-ivory-orange text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors">
+            Retour à l'accueil
+        </a>
+    </div>
+
+    <style>
+        @keyframes fade-in {
+            0% { opacity: 0; transform: translateY(-20px);}
+            100% { opacity: 1; transform: translateY(0);}
+        }
+        .animate-fade-in { animation: fade-in 0.6s ease-out; }
+        :root {
+            --ivory-orange: #FF8200;
+            --ivory-green: #009A44;
+        }
+        .bg-ivory-orange { background-color: var(--ivory-orange); }
+        .text-ivory-green { color: var(--ivory-green); }
+        .hover\:bg-orange-600:hover { background-color: #e67300; }
+    </style>
+
+</body>
+</html>

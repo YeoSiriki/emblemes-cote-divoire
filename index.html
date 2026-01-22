@@ -695,6 +695,146 @@
         </section>
     </main>
 
+            <!-- Localisation Section -->
+        <section id="localisation" class="mb-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-playfair font-bold text-ivory-green mb-4">
+                    Notre Localisation
+                </h2>
+                <div class="w-24 h-1 bg-ivory-orange mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">
+                    L’UFR des Sciences Biologiques est située au sein de l’Université
+                    Peleforo GON COULIBALY (UPGC).
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+                <!-- Carte Google Maps -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden map-animated">
+                    <iframe
+                        src="https://www.google.com/maps?q=Université%20Peleforo%20Gon%20Coulibaly%20Korhogo&output=embed"
+                        class="w-full h-80 border-0"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Carte information -->
+                <div class="bg-white p-8 rounded-xl shadow-lg animate-slide-up" style="animation-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                        Université Peleforo GON COULIBALY
+                    </h3>
+
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-ivory-orange mr-3 mt-1"></i>
+                            <span>Korhogo, Région du Poro – Côte d’Ivoire</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-university text-ivory-green mr-3 mt-1"></i>
+                            <span>UFR des Sciences Biologiques</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-road text-ivory-blue mr-3 mt-1"></i>
+                            <span>Quartier Dohkaha – Route d’Abidjan</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-6">
+                        <a href="https://maps.app.goo.gl/CUMEcj5wbicYVPa9A"
+                           target="_blank"
+                           class="inline-flex items-center bg-ivory-orange text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+                            <i class="fas fa-directions mr-2"></i>
+                            Ouvrir dans Google Maps
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Contact rapide -->
+        <section id="contact" class="mb-20 scroll-mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-playfair font-bold text-ivory-green mb-4">
+                    Nous contacter
+                </h2>
+                <div class="w-24 h-1 bg-ivory-orange mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">
+                    Pour toute information ou collaboration avec l’UFR des Sciences Biologiques,
+                    n’hésitez pas à nous écrire.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+
+                <!-- Coordonnées -->
+                <div class="bg-white p-8 rounded-xl shadow-lg animate-slide-up">
+                    <h3 class="text-xl font-bold mb-4">Coordonnées</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li><i class="fas fa-university text-ivory-green mr-2"></i> UFR Sciences Biologiques – UPGC</li>
+                        <li><i class="fas fa-map-marker-alt text-ivory-orange mr-2"></i> Korhogo, Côte d’Ivoire</li>
+                        <li><i class="fas fa-envelope text-ivory-blue mr-2"></i> info@upgc.edu.ci</li>
+                    </ul>
+                </div>
+
+                <!-- Formulaire -->
+                <div class="bg-white p-8 rounded-xl shadow-lg animate-slide-up" style="animation-delay: 0.2s;">
+                    <form id="contactForm" class="space-y-5">
+                        <input type="text" name="nom" placeholder="Nom et prénoms *" required
+                            class="w-full border rounded-lg px-4 py-2">
+
+                        <input type="email" name="email" placeholder="Adresse email *" required
+                            class="w-full border rounded-lg px-4 py-2">
+
+                        <input type="text" name="telephone" placeholder="Téléphone"
+                            class="w-full border rounded-lg px-4 py-2">
+
+                        <input type="text" name="entreprise" placeholder="Entreprise"
+                            class="w-full border rounded-lg px-4 py-2">
+
+                        <textarea name="message" rows="4" placeholder="Votre message *" required
+                                class="w-full border rounded-lg px-4 py-2"></textarea>
+
+                        <button type="submit"
+                                class="w-full bg-ivory-orange text-white py-3 rounded-full font-semibold hover:bg-orange-600">
+                            Envoyer
+                        </button>
+
+                        <p id="formMessage" class="mt-3 text-center font-semibold"></p> 
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Script AJAX -->
+        <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Empêche le rechargement de la page
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch('send_mail.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                const messageEl = document.getElementById('formMessage');
+                messageEl.textContent = data;        // Affiche le message de succès ou d'erreur
+                messageEl.classList.remove('hidden'); 
+                form.reset();                        // Réinitialise le formulaire
+            })
+            .catch(error => {
+                const messageEl = document.getElementById('formMessage');
+                messageEl.textContent = "Une erreur est survenue. Veuillez réessayer.";
+                messageEl.classList.remove('hidden');
+            });
+        });
+        </script>
+
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-12 pb-8">
         <div class="container mx-auto px-4">
